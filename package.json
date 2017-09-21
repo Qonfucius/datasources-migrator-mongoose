@@ -1,0 +1,22 @@
+{
+  "name": "datasources-migrator-mongoose",
+  "version": "0.0.1",
+  "description": "Driver mongoose for datasources-migratory",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/HungryUp/datasources-migrator-mongoose.git"
+  },
+  "keywords": [
+    "migrations"
+  ],
+  "author": "HungryUp",
+  "license": "GPL-3.0",
+  "bugs": {
+    "url": "https://github.com/HungryUp/datasources-migrator-mongoose/issues"
+  },
+  "homepage": "https://github.com/HungryUp/datasources-migrator-mongoose#readme"
+}
