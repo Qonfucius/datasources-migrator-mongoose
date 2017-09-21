@@ -18,5 +18,8 @@
   "bugs": {
     "url": "https://github.com/HungryUp/datasources-migrator-mongoose/issues"
   },
-  "homepage": "https://github.com/HungryUp/datasources-migrator-mongoose#readme"
+  "homepage": "https://github.com/HungryUp/datasources-migrator-mongoose#readme",
+  "dependencies": {
+    "mongoose": "^4.11.12"
+  }
 }
