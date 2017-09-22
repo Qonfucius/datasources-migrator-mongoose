@@ -1,6 +1,6 @@
 {
   "name": "datasources-migrator-mongoose",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "Driver mongoose for datasources-migratory",
   "main": "index.js",
   "scripts": {
