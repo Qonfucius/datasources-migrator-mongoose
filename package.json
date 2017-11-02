@@ -11,7 +11,8 @@
     "url": "git+https://github.com/Qonfucius/datasources-migrator-simple-arangorm.git"
   },
   "keywords": [
-    "migrations", "arangodb"
+    "migrations",
+    "arangodb"
   ],
   "author": "Qonfucius",
   "license": "GPL-3.0",

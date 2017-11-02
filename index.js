@@ -1,13 +1,9 @@
-const mongoose = require('mongoose');
-const { promisify } = require('util');
-const fs = require('fs');
 const { join } = require('path');
 
-const readdir = promisify(fs.readdir);
-
 module.exports = function ({
-  path, rollback, uri, models, destroyOld = false,
+  path, rollback, servicePath,
 }, workingDir) {
+  require(join(workingDir, servicePath));
   return {
     async play(db, migrationFiles = []) {
       const migrations = migrationFiles
@@ -17,28 +13,16 @@ module.exports = function ({
         migrations.reverse();
       }
       for (const migration of migrations) {
-        await migration[rollback ? 'down' : 'up'](mongoose);
+        await migration[rollback ? 'down' : 'up']();
       }
     },
 
     async init() {
-      mongoose.Promise = Promise;
-      mongoose.connection.on('error', (e) => { throw e; });
-      const db = await mongoose.connect(uri);
-      if (destroyOld) {
-        await mongoose.connection.db.dropDatabase();
-      }
-      const modelsPath = join(workingDir, models);
-      (await readdir(modelsPath))
-        .filter(file => ~file.search(/^[^.].*\.js$/))
-        .map(modelName => require(join(modelsPath, modelName)))
-        .filter(model => !!model.schema)
-        .forEach(model => mongoose.model(model.modelName, model.schema));
-      return db;
+      return true;
     },
 
     async end() {
-      return mongoose.disconnect();
+      return true;
     },
   };
 };
