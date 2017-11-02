@@ -1,6 +1,6 @@
 {
-  "name": "datasources-migrator-mongoose",
-  "version": "0.0.3",
+  "name": "datasources-migrator-simple-arangorm",
+  "version": "0.0.1",
   "description": "Driver mongoose for datasources-migratory",
   "main": "index.js",
   "scripts": {
@@ -8,19 +8,19 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/HungryUp/datasources-migrator-mongoose.git"
+    "url": "git+https://github.com/Qonfucius/datasources-migrator-simple-arangorm.git"
   },
   "keywords": [
-    "migrations"
+    "migrations", "arangodb"
   ],
-  "author": "HungryUp",
+  "author": "Qonfucius",
   "license": "GPL-3.0",
   "bugs": {
-    "url": "https://github.com/HungryUp/datasources-migrator-mongoose/issues"
+    "url": "https://github.com/Qonfucius/datasources-migrator-simple-arangorm/issues"
   },
-  "homepage": "https://github.com/HungryUp/datasources-migrator-mongoose#readme",
+  "homepage": "https://github.com/Qonfucius/datasources-migrator-simple-arangorm#readme",
   "dependencies": {
-    "mongoose": "^4.11.12"
+    "simple-arangorm": "^0.0.4"
   },
   "devDependencies": {
     "eslint": "^4.7.2",
